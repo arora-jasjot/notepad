@@ -207,7 +207,7 @@
 @media only screen and (max-width: 450px){
     .note{
         width: 320px;
-        height: 240px;
+        height: 250px;
     }
     .add-bg{
         width: 320px;
@@ -217,7 +217,7 @@
         height: 40px;
     }
     .note .header .heading{
-        font-size: 1.3em;
+        font-size: 1.1em;
     }
     .note .body{
         height: 150px;
@@ -226,7 +226,6 @@
         overflow-y: scroll;
     }
     .note .footer{
-        height: 30px;
         font-size: 0.9em;
     }
 }
