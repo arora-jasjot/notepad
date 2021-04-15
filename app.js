@@ -12,7 +12,7 @@ var notes = [
         date: "29/3/2021"
     }
 ];
-
+var bd= document.getElementsByTagName("body")[0];
 function init(){
     var notepad = document.querySelector(".notepad");
     notepad.innerHTML = "<div class='note add-note'><div class='add-bg'><i class='far fa-plus-square'></i><h1>Add New Note</h1> </div><div class='header'><div class='heading'>Heading of the note</div><div class='icons'><i class='far fa-edit edit-btn'></i><i class='fas fa-trash delete-btn'></i></div></div><div class='body'><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, distinctio fugit eum officiis incidunt quos blanditiis commodi. Laborum eum possimus nesciunt recusandae eveniet. Tenetur dolor saepe nihil assumenda, praesentium temporibus?</p></div><div class='footer'><div class='author'>Created by : <span>Jasjot singh</span></div><div class='date'>29/03/2021</div></div></div>";
@@ -33,6 +33,7 @@ function run() {
         edit_btn[i].addEventListener("click", function () {
             var j=0;
             edit_mode.style.display = "flex";
+            bd.style.overflow="hidden";
             var heading = this.parentElement.previousElementSibling.innerHTML;
             for (j = 0; j < notes.length; j++) {
                 if (notes[j].heading === heading) {
@@ -42,6 +43,8 @@ function run() {
         })
         delete_btn[i].addEventListener("click", function () {
             delete_mode.style.display = "flex";
+            bd.style.overflow="hidden";
+            document.style.over
             var heading = this.parentElement.previousElementSibling.innerHTML;
             for (j = 0; j < notes.length; j++) {
                 if (notes[j].heading === heading) {
@@ -52,6 +55,7 @@ function run() {
     }
     add_btn.addEventListener("click", function () {
         add_mode.style.display = "flex";
+        bd.style.overflow="hidden";
         var x=notes.length;
         add(x);
     })
@@ -60,6 +64,7 @@ function run() {
             edit_mode.style.display = "none";
             delete_mode.style.display = "none";
             add_mode.style.display = "none";
+            bd.style.overflow="";
         })
     }
 
@@ -76,6 +81,7 @@ function run() {
            notes[crnt].author = edit_form.children[2].value;
            init();
            edit_mode.style.display = "none";
+           bd.style.overflow="";
         })
     }
     function dlt(n){
@@ -85,6 +91,7 @@ function run() {
             notes.splice(n, 1);
             init();
             delete_mode.style.display = "none";
+            bd.style.overflow="";
         })
     }
     function add(n){
@@ -107,6 +114,7 @@ function run() {
             notes[n].author = add_form.children[2].value;
             init();
             add_mode.style.display = "none";
+            bd.style.overflow="";
          })
     }
 }
