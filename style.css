@@ -216,6 +216,9 @@
     .note .header{
         height: 40px;
     }
+    .note .header .heading{
+        font-size: 1.3em;
+    }
     .note .body{
         height: 150px;
         padding: 10px;
@@ -224,5 +227,6 @@
     }
     .note .footer{
         height: 30px;
+        font-size: 0.9em;
     }
 }
