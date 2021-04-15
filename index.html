@@ -10,98 +10,51 @@
 </head>
 <body>
     <div class="container">
+        <div class="edit-mode module">
+            <div class="exit"><i class="far fa-times-circle exit-btn"></i></div>
+            <div class="edit-form form">
+                <h1><span>Edit Your Note</span></h1>
+                <form action="">
+                    <input type="text" id="heading" name="heading" placeholder="Heading of your Note" required>
+                    <textarea name="note" id="" cols="30" rows="10" required></textarea>
+                    <input type="text" id="author" name="author" placeholder="Jack Smith" required>
+                    <input type="submit" value="Submit" id="submit" class="submit">
+                </form>
+            </div>
+        </div>
+        <div class="delete-mode module">
+            <div class="exit"><i class="far fa-times-circle exit-btn"></i></div>
+            <div class="delete-form form">
+                <h1><span>Delete this note</span></h1>
+                <h2>This action cannot be undone.</h2>
+                <form action="">
+                    <input type="submit" value="Confirm" id="delete" class="submit">
+                </form>
+            </div>
+        </div>
+        <div class="add-mode module">
+            <div class="exit"><i class="far fa-times-circle exit-btn"></i></div>
+            <div class="add-form form">
+                <h1><span>Add New Note</span></h1>
+                <form action="">
+                    <input type="text" id="heading" name="heading" placeholder="Heading of your Note" required>
+                    <textarea name="note" id="" cols="30" rows="10" required></textarea>
+                    <input type="text" id="author" name="author" placeholder="Jack Smith" required>
+                    <input type="submit" value="Submit" id="submit" class="submit">
+                </form>
+            </div>
+        </div>
         <div class="notepad">
-            <div class="note">
+            <div class="note add-note">
+                <div class="add-bg">
+                    <i class="far fa-plus-square"></i>
+                    <h1>Add New Note</h1>
+                </div>
                 <div class="header">
                     <div class="heading">Heading of the note</div>
                     <div class="icons">
-                        <i class="far fa-edit"></i>
-                        <i class="fas fa-trash"></i>
-                    </div>
-                </div>
-                <div class="body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, distinctio fugit eum officiis incidunt quos blanditiis commodi. Laborum eum possimus nesciunt recusandae eveniet. Tenetur dolor saepe nihil assumenda, praesentium temporibus?</p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur illum soluta repudiandae nisi eligendi vel accusantium qui sunt ducimus, saepe, magni iure error dolorum nihil molestiae, adipisci provident debitis. Iste.</p>
-                </div>
-                <div class="footer">
-                    <div class="author">Created by : <span>Jasjot singh</span></div>
-                    <div class="date">29/03/2021</div>
-                </div>
-            </div>
-            <div class="note">
-                <div class="header">
-                    <div class="heading">Heading of the note</div>
-                    <div class="icons">
-                        <i class="far fa-edit"></i>
-                        <i class="fas fa-trash"></i>
-                    </div>
-                </div>
-                <div class="body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, distinctio fugit eum officiis incidunt quos blanditiis commodi. Laborum eum possimus nesciunt recusandae eveniet. Tenetur dolor saepe nihil assumenda, praesentium temporibus?</p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur illum soluta repudiandae nisi eligendi vel accusantium qui sunt ducimus, saepe, magni iure error dolorum nihil molestiae, adipisci provident debitis. Iste.</p>
-                </div>
-                <div class="footer">
-                    <div class="author">Created by : <span>Jasjot singh</span></div>
-                    <div class="date">29/03/2021</div>
-                </div>
-            </div>
-            <div class="note">
-                <div class="header">
-                    <div class="heading">Heading of the note</div>
-                    <div class="icons">
-                        <i class="far fa-edit"></i>
-                        <i class="fas fa-trash"></i>
-                    </div>
-                </div>
-                <div class="body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, distinctio fugit eum officiis incidunt quos blanditiis commodi. Laborum eum possimus nesciunt recusandae eveniet. Tenetur dolor saepe nihil assumenda, praesentium temporibus?</p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur illum soluta repudiandae nisi eligendi vel accusantium qui sunt ducimus, saepe, magni iure error dolorum nihil molestiae, adipisci provident debitis. Iste.</p>
-                </div>
-                <div class="footer">
-                    <div class="author">Created by : <span>Jasjot singh</span></div>
-                    <div class="date">29/03/2021</div>
-                </div>
-            </div>
-            <div class="note">
-                <div class="header">
-                    <div class="heading">Heading of the note</div>
-                    <div class="icons">
-                        <i class="far fa-edit"></i>
-                        <i class="fas fa-trash"></i>
-                    </div>
-                </div>
-                <div class="body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, distinctio fugit eum officiis incidunt quos blanditiis commodi. Laborum eum possimus nesciunt recusandae eveniet. Tenetur dolor saepe nihil assumenda, praesentium temporibus?</p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur illum soluta repudiandae nisi eligendi vel accusantium qui sunt ducimus, saepe, magni iure error dolorum nihil molestiae, adipisci provident debitis. Iste.</p>
-                </div>
-                <div class="footer">
-                    <div class="author">Created by : <span>Jasjot singh</span></div>
-                    <div class="date">29/03/2021</div>
-                </div>
-            </div>
-            <div class="note">
-                <div class="header">
-                    <div class="heading">Heading of the note</div>
-                    <div class="icons">
-                        <i class="far fa-edit"></i>
-                        <i class="fas fa-trash"></i>
-                    </div>
-                </div>
-                <div class="body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, distinctio fugit eum officiis incidunt quos blanditiis commodi. Laborum eum possimus nesciunt recusandae eveniet. Tenetur dolor saepe nihil assumenda, praesentium temporibus?</p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur illum soluta repudiandae nisi eligendi vel accusantium qui sunt ducimus, saepe, magni iure error dolorum nihil molestiae, adipisci provident debitis. Iste.</p>
-                </div>
-                <div class="footer">
-                    <div class="author">Created by : <span>Jasjot singh</span></div>
-                    <div class="date">29/03/2021</div>
-                </div>
-            </div>
-            <div class="note">
-                <div class="header">
-                    <div class="heading">Heading of the note</div>
-                    <div class="icons">
-                        <i class="far fa-edit"></i>
-                        <i class="fas fa-trash"></i>
+                        <i class="far fa-edit edit-btn"></i>
+                        <i class="fas fa-trash delete-btn"></i>
                     </div>
                 </div>
                 <div class="body">
@@ -115,5 +68,6 @@
             </div>
         </div>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>

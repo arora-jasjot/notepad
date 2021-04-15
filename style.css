@@ -3,15 +3,112 @@
     margin: 0%;
 }
 .container{
-    width: 94%;
-    max-width: 1400px;
-    margin: auto;
+    position: relative;
 }
+/*Modules*/
+.module{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.exit{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.exit i{
+    font-size: 40px;
+    color: beige;
+    transition: all 0.5s;
+}
+.exit i:hover{
+    font-size: 50px;
+    text-shadow: 4px 4px 5px red;
+}
+.module .form{
+    color: white;
+    width: 100%;
+}
+.module .form h1, .module .form h2{
+    margin-bottom: 40px;
+    text-align: center;
+}
+.module .form h2{
+    color: rgb(255, 0, 0);
+}
+.module .form h1 span{
+    padding: 10px 15px;
+    border-bottom: 2px solid rgb(255, 135, 135);
+    border-radius: 30px;
+    letter-spacing: 2px;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+.module .form form{
+    display: flex;
+    flex-direction: column;
+}
+.module .form form input, .module .form form textarea{
+    padding: 15px 10px;
+    font-size: 18px;
+    color: black;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.module .form form .submit{
+    width: 150px;
+    background-color: rgb(50, 205, 63);
+    color: white;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.module .form form #submit:hover{
+    background-color: rgb(23, 109, 30);
+}
+.module .form form #delete{
+    background-color: red;
+}
+.module .form form #delete:hover{
+    background-color: rgb(160, 0, 0);
+}
+/*Edit Module*/
+.edit-mode{
+    display: none;
+}
+
+/* Delete Module*/
+.delete-mode{
+    display: none;
+}
+
+/*Add Module*/
+.add-mode{
+    display: none;
+}
+
+/*Notepad*/
 .notepad{
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    width: 94%;
+    max-width: 1400px;
+    margin: auto;
 }
 .note{
     width: 400px;
@@ -46,12 +143,15 @@
     font-size: 1.5em;
 }
 .fa-edit{
-    color: rgb(17, 0, 255);
+    color: rgb(255, 0, 179);
 }
-.icons i:hover{
+.fa-edit:hover{
     color: rgb(58, 150, 63);
 }
 .fa-trash{
+    color: rgb(17, 0, 255);
+}
+.fa-trash:hover{
     color: red;
 }
 .note .body{
@@ -76,4 +176,49 @@
 }
 .note .footer .date{
     font-weight: 600;
+}
+.add-note{
+    position: relative;
+}
+.add-bg{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 0;
+    background-color: rgba(0, 212, 53, 0.801);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    flex-direction: column;
+    transition: all 0.5s;
+}
+.add-bg i{
+    font-size: 40px;
+    text-shadow: none;
+    margin-bottom: 20px;
+}
+.add-bg:hover{
+    background-color: rgba(29, 165, 63, 0.945);
+    cursor: pointer;
+    user-select: none;
+}
+@media only screen and (max-width: 450px){
+    .note{
+        width: 320px;
+        height: 240px;
+    }
+    .note .header{
+        height: 40px;
+    }
+    .note .body{
+        height: 150px;
+        padding: 10px;
+        font-size: 14px;
+        overflow-y: scroll;
+    }
+    .note .footer{
+        height: 30px;
+    }
 }
