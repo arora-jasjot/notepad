@@ -2,8 +2,51 @@
     padding: 0%;
     margin: 0%;
 }
+body{
+    background-color: rgba(37, 37, 37, 0.993);
+}
 .container{
     position: relative;
+    margin-left: 130px;
+    border-left: 5px groove greenyellow;
+    min-height: 100vh;
+    background-color: white;
+}
+.navbar{
+    position: fixed;
+    left: 15px;
+    top: 25vh;
+}
+.mode{
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 50px;
+    color: white;
+    transition: all 0.5s;
+    user-select: none;
+    cursor: pointer;
+}
+.mode p{
+    font-size: 18px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    font-weight: 600;
+    transition: all 0.5s;
+}
+.active{
+    color: greenyellow;
+}
+.mode:hover{
+    font-size: 52px;
+}
+.mode:hover p{
+    font-size: 22px;
 }
 /*Modules*/
 .module{
@@ -76,7 +119,7 @@
     cursor: pointer;
     transition: all 0.5s;
 }
-.module .form form #submit:hover{
+.module .form form .submit:hover{
     background-color: rgb(23, 109, 30);
 }
 .module .form form #delete{
@@ -101,6 +144,9 @@
 }
 
 /*Notepad*/
+#mypad{
+    transition: all 0.5s;
+}
 .notepad{
     display: flex;
     justify-content: space-around;
@@ -148,10 +194,10 @@
 .fa-edit:hover{
     color: rgb(58, 150, 63);
 }
-.fa-trash{
+.delete-btn{
     color: rgb(17, 0, 255);
 }
-.fa-trash:hover{
+.delete-btn:hover{
     color: red;
 }
 .note .body{
@@ -203,6 +249,126 @@
     background-color: rgba(29, 165, 63, 0.945);
     cursor: pointer;
     user-select: none;
+}
+
+
+/*To-do List*/
+#todolist{
+    transition: all 0.5s;
+}
+.list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+}
+.head, .data, .todo-form{
+    width: 80%;
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-radius: 5px;
+    letter-spacing: 1.5px;
+    font-size: 20px;
+    border: 2px groove black;
+    padding-right: 50px;
+    position: relative;
+    cursor: pointer;
+}
+.head{
+    background-color: rgba(37, 37, 37, 0.993);
+    color: yellow;
+    font-size: 24px;
+    font-weight: 600;
+}
+.todo-form{
+    background-color: rgb(183, 255, 255);
+    overflow: hidden;
+    transition: height .5s;
+}
+.todo-form input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(183, 255, 255);
+    font-size: 20px;
+    padding-left: 10px;
+}
+.data{
+    border-top: none;
+}
+.data:nth-child(even){
+    background-color: rgb(182, 255, 182);
+}
+.list-icon{
+    position: absolute;
+    right: 13px;
+    font-size: 18px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.list-icon:hover{
+    font-size: 25px;
+    color: chartreuse;
+}
+.dlt-icon:hover{
+    color: red;
+}
+.enter-btn:hover{
+    color: rgb(1, 167, 48);
+}
+.completed{
+    text-decoration: line-through;
+    color: gray;
+}
+.add-todo{
+    display: none;
+}
+.add-todo .form form .submit{
+    margin-top: 30px;
+}
+@media only screen and (max-width: 600px){
+    .container{
+        margin-left: 0px;
+        border-left: none;
+        padding-top: 100px;
+    }
+    .navbar{
+        width: 100%;
+        position: fixed;
+        z-index: 9;
+        left: 0px;
+        top: 0vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 25px 0px;
+        background-color: rgba(37, 37, 37, 0.993);
+    }
+    .mode{
+        width: 100px;
+        height: 50px;
+        margin: 0 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 36px;
+    }
+    .mode p{
+        font-size: 16px;
+    }
+    .mode:hover{
+        font-size: 40px;
+    }
+    .mode:hover p{
+        font-size: 18px;
+    }
 }
 @media only screen and (max-width: 450px){
     .note{

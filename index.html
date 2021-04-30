@@ -9,16 +9,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 </head>
 <body>
-    <div class="container">
+    <div class="navbar">
+        <div class="mode active">
+            <i class="far fa-clipboard"></i>
+            <p>Notepad</p>
+        </div>
+        <div class="mode">
+            <i class="far fa-list-alt"></i>
+            <p>To-Do</p>
+        </div>
+    </div>
+    <div class="container" id="mypad">
         <div class="edit-mode module">
             <div class="exit"><i class="far fa-times-circle exit-btn"></i></div>
             <div class="edit-form form">
                 <h1><span>Edit Your Note</span></h1>
                 <form action="">
-                    <input type="text" id="heading" name="heading" placeholder="Heading of your Note" required>
-                    <textarea name="note" id="" cols="30" rows="10" required></textarea>
-                    <input type="text" id="author" name="author" placeholder="Jack Smith" required>
-                    <input type="submit" value="Submit" id="submit" class="submit">
+                    <input type="text" name="heading" placeholder="Heading of your Note" required>
+                    <textarea name="note" cols="30" rows="10" required></textarea>
+                    <input type="text" name="author" placeholder="Jack Smith" required>
+                    <input type="submit" value="Submit" class="submit">
                 </form>
             </div>
         </div>
@@ -37,33 +47,62 @@
             <div class="add-form form">
                 <h1><span>Add New Note</span></h1>
                 <form action="">
-                    <input type="text" id="heading" name="heading" placeholder="Heading of your Note" required>
-                    <textarea name="note" id="" cols="30" rows="10" required></textarea>
-                    <input type="text" id="author" name="author" placeholder="Jack Smith" required>
-                    <input type="submit" value="Submit" id="submit" class="submit">
+                    <input type="text" name="heading" placeholder="Heading of your Note" required>
+                    <textarea name="note" cols="30" rows="10" required></textarea>
+                    <input type="text" name="author" placeholder="Jack Smith" required>
+                    <input type="submit" value="Submit" class="submit">
                 </form>
             </div>
         </div>
         <div class="notepad">
-            <div class="note add-note">
-                <div class="add-bg">
-                    <i class="far fa-plus-square"></i>
-                    <h1>Add New Note</h1>
+        </div>
+    </div>
+    <div class="container" id="todolist">
+        <div class="add-todo module">
+            <div class="exit"><i class="far fa-times-circle exit-todo"></i></div>
+            <div class="add-todo-form form">
+                <h1><span>Add New Todo</span></h1>
+                <form action="">
+                    <input type="text" name="heading" placeholder="Work to do">
+                    <input type="submit" value="Submit" class="submit">
+                </form>
+            </div>
+        </div>
+        <div class="list">
+            <div class="head">
+                To Do List
+                <div class="list-icon add-btn">
+                    <i class="fas fa-plus"></i>
                 </div>
-                <div class="header">
-                    <div class="heading">Heading of the note</div>
-                    <div class="icons">
-                        <i class="far fa-edit edit-btn"></i>
-                        <i class="fas fa-trash delete-btn"></i>
-                    </div>
+            </div>
+            <div class="todo-form">
+                <input type="text" name="task" id="task" placeholder="Add a new Task">
+                <div class="list-icon enter-btn">
+                    <i class="fas fa-sign-in-alt"></i>
                 </div>
-                <div class="body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, distinctio fugit eum officiis incidunt quos blanditiis commodi. Laborum eum possimus nesciunt recusandae eveniet. Tenetur dolor saepe nihil assumenda, praesentium temporibus?</p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur illum soluta repudiandae nisi eligendi vel accusantium qui sunt ducimus, saepe, magni iure error dolorum nihil molestiae, adipisci provident debitis. Iste.</p>
+            </div>
+            <div class="data">
+                Go to Gym
+                <div class="list-icon dlt-icon">
+                    <i class="fas fa-trash"></i>
                 </div>
-                <div class="footer">
-                    <div class="author">Created by : <span>Jasjot singh</span></div>
-                    <div class="date">29/03/2021</div>
+            </div>
+            <div class="data completed">
+                Do HomeWork
+                <div class="list-icon dlt-icon">
+                    <i class="fas fa-trash"></i>
+                </div>
+            </div>
+            <div class="data">
+                Babu Shona ko call
+                <div class="list-icon dlt-icon">
+                    <i class="fas fa-trash"></i>
+                </div>
+            </div>
+            <div class="data">
+                Fight
+                <div class="list-icon dlt-icon">
+                    <i class="fas fa-trash"></i>
                 </div>
             </div>
         </div>
